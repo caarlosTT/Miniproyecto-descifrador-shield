@@ -1,0 +1,41 @@
+Widgets:
+
+<Widgets>
+    cols: 1
+    Image:
+        source: "img/shield.png"
+        pos_hint: {'left': 1, 'top': 1}
+        size_hint: (0.1, 0.1)
+    TextInput:
+        id: input
+        pos_hint: {'center_x': 0.5, 'center_y': 0.75} 
+        size_hint: (1, 0.3)
+    Slider:
+        id: slider 
+        min: -26
+        max: 26
+        orientation: "horizontal"
+        value: 0
+        on_value: root.slider_value(self)
+        pos_hint: {'left': 1, 'center_y': 0.5} 
+        size_hint: (0.75, 0.1)
+    Label:
+        text: root.val
+        font_name: "fonts/LCD.ttf"
+        font_size: "75dp"
+        color: "#88FF88"
+        pos_hint: {'right': 1, 'center_y': 0.5} 
+        size_hint: (0.25, 0.1)
+    Label:
+        id: text_label
+        text: ''
+        font_size: "25dp"
+        color: "#FFFFFF"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.25} 
+        size_hint: (1, 0.3)
+    Button:
+        id: button
+        text: "CIFRAR/DESCIFRAR"
+        pos_hint: {'center_x': 0.5, 'y': 0} 
+        size_hint: (1, 0.1)    
+        on_press: root.cambio_texto(self)
